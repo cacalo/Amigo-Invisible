@@ -12,12 +12,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="sin-eventos" *ngIf="eventos.length === 0">
-    <h2>No hay eventos disponibles</h2>
-    <p>Agregá tu primer evento haciendo click en el botón "+" al pie de la aplicación</p>
-  </div>
-
-  <ion-segment value="pendientes" *ngIf="eventos.length !==0">
+  <ion-segment value="pendientes">
     <ion-segment-button value="pendientes" (click)="getEventos('abiertos')" >
       <ion-label>Pendientes</ion-label>
     </ion-segment-button>
@@ -28,6 +23,11 @@
       <ion-label>Todos</ion-label>
     </ion-segment-button>
   </ion-segment>
+
+  <div id="sin-eventos" *ngIf="eventos.length === 0">
+    <h2>No hay eventos disponibles</h2>
+    <p>Agregá tu primer evento haciendo click en el botón "+" al pie de la aplicación</p>
+  </div>
 
   <ion-card *ngFor="let evento of eventos" [routerLink]="['/eventos',evento.id]" [ngClass]="{'evento-terminado': evento.finalizado}">
     <ion-card-header>

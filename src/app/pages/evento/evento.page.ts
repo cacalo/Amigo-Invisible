@@ -161,5 +161,6 @@ export class EventoPage {
       this.es.editEvento(this.evento!);
     }
     this.ts.toastDefault(this.evento!.finalizado ? "¡Evento terminado!" : "Evento resstaurado");
+    if(this.evento!.finalizado) this.atras();
   }
 }
