@@ -25,8 +25,6 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-$margin-costados: 16px;
-
 .flex-even{
   display: flex;
   justify-content: space-evenly;
@@ -40,4 +38,8 @@ $margin-costados: 16px;
 .flex-center{
   display: flex;
   justify-content: center;
+}
+
+.evento-terminado{
+  border: rgba(255, 134, 134, 0.235) 1px solid;
 }
