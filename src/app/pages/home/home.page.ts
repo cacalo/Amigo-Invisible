@@ -12,10 +12,11 @@ import { StorageService } from '../../core/services/storage.service';
   styleUrls: ['home.page.scss']
 })
 export class HomePage implements ViewWillEnter {
+  filtro:"abiertos" | "finalizados" | "todos" = "abiertos";
 
   constructor(private storage:StorageService, private es:EventosService) { }
   ionViewWillEnter(): void {
-    this.getEventos()
+    this.getEventos(this.filtro);
   }
 
 

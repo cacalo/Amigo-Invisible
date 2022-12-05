@@ -12,8 +12,8 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-segment value="pendientes">
-    <ion-segment-button value="pendientes" (click)="getEventos('abiertos')" >
+  <ion-segment value="abiertos" [(ngModel)]="filtro">
+    <ion-segment-button value="abiertos" (click)="getEventos('abiertos')" >
       <ion-label>Pendientes</ion-label>
     </ion-segment-button>
     <ion-segment-button value="finalizados" (click)="getEventos('finalizados')">
