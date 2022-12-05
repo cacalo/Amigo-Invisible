@@ -98,7 +98,7 @@ export class EventoPage {
   async modalResortear() {
     const actionSheet = await this.actionSheetCtrl.create({
       header: 'Eliminando evento',
-      subHeader: '¿Estás seguro de que querés eliminar este evento?',
+      subHeader: '¿Estás seguro de que querés re-sortear este evento?',
       buttons: [
         {
           text: 'Resortear',
