@@ -160,7 +160,7 @@ export class EventoPage {
       this.evento!.finalizado = !this.evento!.finalizado
       this.es.editEvento(this.evento!);
     }
-    this.ts.toastDefault(this.evento!.finalizado ? "¡Evento terminado!" : "Evento resstaurado");
+    this.ts.toastDefault(this.evento!.finalizado ? "¡Evento terminado!" : "Evento restaurado");
     if(this.evento!.finalizado) this.atras();
   }
 }
