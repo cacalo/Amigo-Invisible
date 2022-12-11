@@ -43,9 +43,11 @@ export class EventosService {
   }
 
   async editEvento(editEvento:evento){
-    const eventos = await this.storage.get("eventos");
+    const eventos:evento[] = await this.storage.get("eventos");
     const nuevoEventos:evento[] = eventos.filter((evento:evento) => evento.id != editEvento.id)
-    editEvento.participantes.forEach(participante => participante.mostrar = false);
+    eventos.forEach(evento =>{
+      evento.participantes.forEach(participante => participante.mostrar = false);
+    })
     nuevoEventos.push(editEvento);
     nuevoEventos.sort((a, b) => a.id! - b.id! )
     this.storage.set("eventos",nuevoEventos);
