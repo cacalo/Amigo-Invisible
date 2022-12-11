@@ -32,6 +32,10 @@ export class NuevoEventoPage  {
     this.navCtrl.navigateRoot("")
   }
 
+  cambiarFecha(fechaStr:any){
+    this.eventoActual.fecha_limite = new Date(fechaStr.detail.value);
+  }
+
   async guardarForm(){
     const participantesReales = this.eventoActual.participantes.filter(participante => participante.nombre !== "");
     if(participantesReales.length < 3) return this.alertFaltanParticipantes()

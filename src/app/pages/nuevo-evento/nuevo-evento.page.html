@@ -26,7 +26,7 @@
 
     <ion-modal [keepContentsMounted]="true">
       <ng-template>
-        <ion-datetime id="datetime"  min="{{hoy}}"></ion-datetime>
+        <ion-datetime id="datetime"  min="{{hoy}}" (ionChange)="cambiarFecha($event)"></ion-datetime>
       </ng-template>
     </ion-modal>
 
